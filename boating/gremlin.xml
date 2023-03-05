@@ -70,7 +70,7 @@
                         </action-set>
                     </container>
                 </axis>
-                <axis description="" id="2"/>
+                <axis description="Throttle" id="2"/>
                 <button description="" id="1"/>
                 <button description="" id="2"/>
                 <button description="" id="3"/>
