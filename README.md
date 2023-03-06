@@ -61,17 +61,17 @@ Configuration is not so straight forward. eSail does not offer much flexibility 
 
 1. Startup HidHide and ensure to un-tick the Pico. We want it visible.
 
-![hidhide untick](boating/pics/hidhid_1.png)
+![hidhide untick](boating/pics/hidhid_0.png)
 
 2. Start up Gremlin and load the configuration file `gremlin.xml` provided with this repo. You should see this:
 
-![gremlin confirguration](boating/pics/gremlin_1.png)
+![gremlin confirguration](boating/pics/gremlin_0.png)
  
 Press `Active` button on top left in Gremlin (game controller button)
 
 3. Make Pico invisible by ticking it in HidHide. Note you should see a virtual vJoy device as well. Leave it un-ticked as this will be the device eSail is accessing.
 
-![hidhid tick](boating/pics/hidhid_2.png)
+![hidhid tick](boating/pics/hidhid_1.png)
 
 4. Startup eSail go under settings and adjust them according to following screen shot:
 
