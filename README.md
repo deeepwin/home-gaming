@@ -1,10 +1,10 @@
 # Custom Made eSail Controller
 
-Created by Deepwin, 06.03.2023
+Created by Deeepwin, 06.03.2023
 
 ## Introduction
 
-This document describes a weekend project in which I have implemented a custom made steering will and throttle for the [eSail](https://www.esailyachtsimulator.com/) simulator. Below you can see the final setup:
+This document describes a weekend project in which I have implemented a custom made steering wheel and throttle for the [eSail](https://www.esailyachtsimulator.com/) simulator. Below you can see the final setup:
 
 ![eSail Setup](boating/pics/setup.png)
 
