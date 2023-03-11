@@ -55,28 +55,62 @@
         </device>
         <device device-guid="{BBC70C60-BA8E-11ED-8001-444553540000}" label="esail-controller" name="CircuitPython HID" type="joystick">
             <mode name="Default">
-                <axis description="Steering" id="1">
+                <axis description="Steering" id="1"/>
+                <axis description="Throttle" id="2"/>
+                <button description="Thruttle Up" id="1">
                     <container type="basic">
                         <action-set>
-                            <response-curve>
-                                <mapping type="cubic-spline">
-                                    <control-point x="-1.0" y="-0.34"/>
-                                    <control-point x="1.0" y="0.34"/>
-                                    <control-point x="0.0" y="0.0"/>
-                                </mapping>
-                                <deadzone center-high="0.0" center-low="0.0" high="1.0" low="-1.0"/>
-                            </response-curve>
-                            <remap axis="1" axis-scaling="1.0" axis-type="absolute" vjoy="1"/>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="17"/>
+                            </map-to-keyboard>
                         </action-set>
                     </container>
-                </axis>
-                <axis description="Throttle" id="2"/>
-                <button description="" id="1"/>
-                <button description="" id="2"/>
-                <button description="" id="3"/>
-                <button description="" id="4"/>
-                <button description="" id="5"/>
-                <button description="" id="6"/>
+                </button>
+                <button description="Throttle Neutral" id="2">
+                    <container type="basic">
+                        <action-set>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="31"/>
+                            </map-to-keyboard>
+                        </action-set>
+                    </container>
+                </button>
+                <button description="Throttle Down" id="3">
+                    <container type="basic">
+                        <action-set>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="45"/>
+                            </map-to-keyboard>
+                        </action-set>
+                    </container>
+                </button>
+                <button description="Steering Left" id="4">
+                    <container type="basic">
+                        <action-set>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="30"/>
+                            </map-to-keyboard>
+                        </action-set>
+                    </container>
+                </button>
+                <button description="Steering Center" id="5">
+                    <container type="basic">
+                        <action-set>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="44"/>
+                            </map-to-keyboard>
+                        </action-set>
+                    </container>
+                </button>
+                <button description="Steering Right" id="6">
+                    <container type="basic">
+                        <action-set>
+                            <map-to-keyboard>
+                                <key extended="False" scan-code="32"/>
+                            </map-to-keyboard>
+                        </action-set>
+                    </container>
+                </button>
                 <button description="" id="7"/>
                 <button description="" id="8"/>
                 <button description="" id="9"/>
@@ -101,6 +135,28 @@
             <mode name="Default">
                 <axis description="" id="1"/>
                 <axis description="" id="2"/>
+                <axis description="" id="3"/>
+                <axis description="" id="4"/>
+                <axis description="" id="5"/>
+                <axis description="" id="6"/>
+                <axis description="" id="7"/>
+                <axis description="" id="8"/>
+                <button description="" id="1"/>
+                <button description="" id="2"/>
+                <button description="" id="3"/>
+                <button description="" id="4"/>
+                <button description="" id="5"/>
+                <button description="" id="6"/>
+                <button description="" id="7"/>
+                <button description="" id="8"/>
+                <button description="" id="9"/>
+                <button description="" id="10"/>
+                <button description="" id="11"/>
+                <button description="" id="12"/>
+                <button description="" id="13"/>
+                <button description="" id="14"/>
+                <button description="" id="15"/>
+                <button description="" id="16"/>
             </mode>
         </vjoy-device>
     </vjoy-devices>
