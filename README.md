@@ -1,10 +1,10 @@
 # Custom Made eSail Controller
 
-Created by Deepwin, 06.03.2023
+Created by Deeepwin, 06.03.2023
 
 ## Introduction
 
-This document describes a weekend project in which I have implemented a custom made steering will and throttle for the [eSail](https://www.esailyachtsimulator.com/) simulator. Below you can see the final setup:
+This document describes a weekend project in which I have implemented a custom made steering wheel and throttle for the [eSail](https://www.esailyachtsimulator.com/) simulator. Below you can see the final setup:
 
 ![eSail Setup](boating/pics/setup.png)
 
@@ -22,6 +22,11 @@ This is what you need to rebuild this setup:
 
 Overall hardware cost is below 20 USD.
 
+## Wiring
+
+The wiring of Raspberry Pi Pico and M3Stack is straight forward. Important is to remove the 10k resistors on the M5Stasck angle sensor and add a jumper, like simple wire piece. The wiring is shown below.
+
+![eSail Setup](boating/pics/wiring.png)
 ## Software
 
 This is the list of software you require and must download:
