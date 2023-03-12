@@ -1,4 +1,4 @@
-# Custom Made eSail Controller
+# Self-Made Sailing Controller
 
 Created by Deeepwin, 06.03.2023
 
@@ -11,6 +11,10 @@ This document describes a weekend project in which I have implemented a custom m
 I wanted to have a setup that gives a similar experience as real sailing. Unfortunately, the gaming controllers and wheels on the market do not work well. For instance racing wheels have a spring, that automatically centers the wheel. The only throttles are those for flight simulators.
 
 To see the controller in action visit this [video](https://youtu.be/DC0lWL9rUmc).
+
+## Support Software
+
+This code and Gremlin configuration files work for [eSail](https://www.esailyachtsimulator.com/) and [Virtual Skippertraning](https://www.blue-2.at/virtual-skippertrainer/).
 
 ## Hardware
 
