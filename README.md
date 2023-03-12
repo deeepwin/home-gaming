@@ -12,9 +12,9 @@ I wanted to have a setup that gives a similar experience as real sailing. Unfort
 
 To see the controller in action visit this [video](https://youtu.be/DC0lWL9rUmc).
 
-## Support Software
+## Supported Simualtor Software
 
-This code and Gremlin configuration files work for [eSail](https://www.esailyachtsimulator.com/) and [Virtual Skippertraning](https://www.blue-2.at/virtual-skippertrainer/).
+These instruction and code work for [eSail](https://www.esailyachtsimulator.com/) and [Virtual Skippertraning](https://www.blue-2.at/virtual-skippertrainer/). Use corresponding Gremlin Joystick configuration file. 
 
 ## Hardware
 
