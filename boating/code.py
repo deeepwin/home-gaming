@@ -5,7 +5,6 @@ import usb_hid
 
 from time import sleep
 
-from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 from hid_gamepad import Gamepad
 
@@ -18,20 +17,25 @@ def read_analog():
     y = ay.value - y_offset
     return x, y
 
-# key board configuration
-keyboard = Keyboard(usb_hid.devices)
-
 throttle_value = 0
+steering_value = 0
 
-def press_button(key):
-    keyboard.press(key) 
-    sleep(0.1)
-    keyboard.release(key)
-    sleep(0.1)
 
-# game pad configuration (x/y values)
+# game pad key configuration
+keyboard_buttons = {    Keycode.W : 1, Keycode.C : 2, Keycode.S : 3, 
+                        Keycode.A : 4, Keycode.Y : 5, Keycode.D : 6
+                    }
+
+# game pad joystick configuration (x/y values)
 gp = Gamepad(usb_hid.devices)
 
+
+def press_button(key):
+    gp.press_buttons(keyboard_buttons[key]) 
+    sleep(0.05)
+    gp.release_buttons(keyboard_buttons[key])
+    sleep(0.05)
+    
 # setup analogue inputs
 ax = analogio.AnalogIn(board.GP26)
 ay = analogio.AnalogIn(board.GP27)
@@ -44,7 +48,7 @@ x_offset = y_offset = 0
 # calibrate to zero on startup
 x_offset, y_offset = read_analog()
 
-# initalize filters
+# initialize filters
 y_filter = y_offset
 x_filter = x_offset
 
@@ -54,6 +58,7 @@ x_max_range = 32768 + x_max_offset + 200
 y_max_offset = abs(32768 - y_offset)
 y_max_range = 32768 + y_max_offset + 200
 
+print('Looping.')
 while True:
     
     # read current analog value
@@ -75,7 +80,7 @@ while True:
         y=y,
     )
     
-    # handle throttle control
+    # handle throttle control with keys
     throttle_pos = int(round((10.0 / 15000.0) * y_value))
 
     if throttle_pos == 0 and throttle_value != 0:
@@ -89,6 +94,21 @@ while True:
         if throttle_pos < throttle_value:
             press_button(Keycode.W)
             throttle_value -= 1
+
+    # handle steering with keys
+    steering_pos = int(round((12.0 / 26000.0) * x_value))
+
+    if steering_pos == 0 and steering_value != 0:
+        press_button(Keycode.Y)
+        steering_value = 0
+    else:
+        if steering_pos > steering_value:
+            press_button(Keycode.A)
+            steering_value += 1
+            
+        if steering_pos < steering_value:
+            press_button(Keycode.D)
+            steering_value -= 1
     
     #print("{:.1f} {:.1f}".format(throttle_pos, y_value))
     #print("{:.1f} {:.1f}".format(x, y))
