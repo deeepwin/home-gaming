@@ -32,8 +32,9 @@ gp = Gamepad(usb_hid.devices)
 
 def press_button(key):
     gp.press_buttons(keyboard_buttons[key]) 
-    sleep(0.05)
+    sleep(0.1)
     gp.release_buttons(keyboard_buttons[key])
+    sleep(0.05)
     
 # setup analogue inputs
 ax = analogio.AnalogIn(board.GP26)
