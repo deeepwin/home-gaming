@@ -34,7 +34,6 @@ def press_button(key):
     gp.press_buttons(keyboard_buttons[key]) 
     sleep(0.05)
     gp.release_buttons(keyboard_buttons[key])
-    sleep(0.05)
     
 # setup analogue inputs
 ax = analogio.AnalogIn(board.GP26)
@@ -113,3 +112,4 @@ while True:
     #print("{:.1f} {:.1f}".format(throttle_pos, y_value))
     #print("{:.1f} {:.1f}".format(x, y))
  
+
